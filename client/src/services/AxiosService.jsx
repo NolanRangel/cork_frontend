@@ -11,7 +11,7 @@ class AxiosService {
     getRestClient() {
         if (!this.serviceInstance) {
             this.serviceInstance = axios.create({
-            baseURL: 'http://localhost:8080/api',
+            baseURL: 'https://cork-community.herokuapp.com/',
             timeout: 10000,
             headers: {
                 'Content-Type': 'application/json'
