@@ -24,6 +24,6 @@ yarn-debug.log*
 yarn-error.log*
 
 # development purposes only
-/src/static/images/adImages
+# /src/static/images/adImages
 
 
