@@ -10,7 +10,6 @@ class AxiosService {
     }
 
     getRestClient() {
-        let rndm = 'rndm'
         if (!this.serviceInstance) {
             this.serviceInstance = axios.create({
             baseURL: 'https://cork-community.herokuapp.com/',
