@@ -6,7 +6,8 @@ import Loader from '../navigation/navigationButtons/Loader';
 import styles from "./EditAdForm.module.css";
 import pushPin from '../../static/images/drawing-pin.png';
 
-const herokuImage = require('../adImages')
+// const herokuImage = require('../adImages')
+
 
 const EditAdForm = () => {
     const history = useHistory();
@@ -51,8 +52,8 @@ const EditAdForm = () => {
             setCategory(response.data.category);
             setDescription(response.data.description);
             setImage(response.data.image)
-            setImagePreview(require(`${herokuImage}${response.data.image}`));
-            // setImagePreview(require(`../../static/images/adImages/${response.data.image}`));
+            // setImagePreview(require(`${herokuImage}${response.data.image}`));
+            setImagePreview(require(`../../static/images/adImages/${response.data.image}`));
             setCity(response.data.city);
             setState(response.data.state);
             setEmail(response.data.email);
@@ -92,7 +93,6 @@ const EditAdForm = () => {
             fileService.deleteFile(previousImage)
             fileService.uploadFile(image)
             .then(response => {
-                console.log(response.data);
                 const formData = {
                     id: adId,
                     title: title,
