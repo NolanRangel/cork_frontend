@@ -6,7 +6,7 @@ import Loader from '../navigation/navigationButtons/Loader';
 import styles from "./EditAdForm.module.css";
 import pushPin from '../../static/images/drawing-pin.png';
 
-const image = require(`../../static/images/adImages/`)
+const herokuImage = require(`../../static/images/adImages/`)
 
 const EditAdForm = () => {
     const history = useHistory();
@@ -51,7 +51,7 @@ const EditAdForm = () => {
             setCategory(response.data.category);
             setDescription(response.data.description);
             setImage(response.data.image)
-            setImagePreview(require(`${image} + ${response.data.image}`));
+            setImagePreview(require(`${herokuImage} + ${response.data.image}`));
             // setImagePreview(require(`../../static/images/adImages/${response.data.image}`));
             setCity(response.data.city);
             setState(response.data.state);
