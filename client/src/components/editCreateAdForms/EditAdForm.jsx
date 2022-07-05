@@ -51,7 +51,7 @@ const EditAdForm = () => {
             setCategory(response.data.category);
             setDescription(response.data.description);
             setImage(response.data.image)
-            setImagePreview(require(`${herokuImage} + ${response.data.image}`));
+            setImagePreview(require(`${herokuImage}${response.data.image}`));
             // setImagePreview(require(`../../static/images/adImages/${response.data.image}`));
             setCity(response.data.city);
             setState(response.data.state);
