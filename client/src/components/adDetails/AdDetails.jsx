@@ -7,7 +7,7 @@ import { useParams } from "react-router-dom";
 import adService from '../../services/AdService';
 import Loader from '../navigation/navigationButtons/Loader';
 
-
+const herokuImage = require('../adImages')
 
 const AdDetails = () => {
     const { adId } = useParams();
@@ -23,7 +23,7 @@ const AdDetails = () => {
             if(response.data.image === "Default_Image.png") {
                 setImage(require(`../../static/images/${response.data.image}`))
             } else {
-                setImage(require(`../../static/images/adImages/${response.data.image}`))
+                setImage(require(`${herokuImage}${response.data.image}`))
             }
         })
         .catch(error => console.error(error))
