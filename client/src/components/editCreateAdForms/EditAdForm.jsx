@@ -6,7 +6,7 @@ import Loader from '../navigation/navigationButtons/Loader';
 import styles from "./EditAdForm.module.css";
 import pushPin from '../../static/images/drawing-pin.png';
 
-const herokuImage = require('../../static/images/adImages/')
+const herokuImage = require('../adImages')
 
 const EditAdForm = () => {
     const history = useHistory();
