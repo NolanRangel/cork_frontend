@@ -6,6 +6,8 @@ import Loader from '../navigation/navigationButtons/Loader';
 import styles from "./EditAdForm.module.css";
 import pushPin from '../../static/images/drawing-pin.png';
 
+const image = require(`../../static/images/adImages/`)
+
 const EditAdForm = () => {
     const history = useHistory();
     const { adId } = useParams();
@@ -49,7 +51,7 @@ const EditAdForm = () => {
             setCategory(response.data.category);
             setDescription(response.data.description);
             setImage(response.data.image)
-            // setImagePreview(`../../static/images/adImages/${response.data.image}`);
+            setImagePreview(require(`${image} + ${response.data.image}`));
             // setImagePreview(require(`../../static/images/adImages/${response.data.image}`));
             setCity(response.data.city);
             setState(response.data.state);
